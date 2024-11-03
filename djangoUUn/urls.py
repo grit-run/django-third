@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from task2.views import index_func, index_class
-
+# from task2.views import index_func, index_class
+from task3.views import basket, head_page, puzzles_dict
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index_func),
-    path('class/', index_class.as_view()),
+    #    path('index/', index_func),
+    #    path('class/', index_class.as_view()),
+    path('', head_page, name='base'),
+    path('puzzle_shop/', puzzles_dict, name='puzzle_shop'),
+    path('basket/', basket, name='puzzle'),
 ]

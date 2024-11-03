@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <h1>Здесь можно купить головоломки</h1>
+
+    <ul>
+        {% for sku, item in puzzle_products.items %}
+            <li>{{ item }}          <button>Купить</button></li>
+        {% endfor %}
+    </ul>
+
+    <a href="/"><button>На главную</button></a>
+
+</body>
+</html>
